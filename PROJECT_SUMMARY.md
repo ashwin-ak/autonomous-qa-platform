@@ -1,5 +1,9 @@
 # Project Documentation Summary
 
+**Author:** Ashwin Kulkarni  
+**Email:** ashwin.ak21@gmail.com  
+**License:** MIT
+
 ## Overview
 The Autonomous QA Platform is a complete, production-ready AI-driven QA system that automatically generates, executes, and analyzes test cases using LLM agents. This document summarizes the improvements and structure implemented.
 
@@ -28,14 +32,30 @@ The Autonomous QA Platform is a complete, production-ready AI-driven QA system t
 ✅ **api/** - API package structure
 ✅ **data/** - ChromaDB and persistence directories
 ✅ **logs/** - Application logging directory
+✅ **scripts/** - Setup and utility scripts (NEW)
+│   ├── Makefile - Development tasks
+│   └── windows/ - Windows-specific scripts
+✅ **docker/** - Docker configuration files (NEW)
+│   ├── Dockerfile, docker-compose.yml, .dockerignore
+✅ **requirements/** - Python dependencies (NEW)
+│   ├── requirements.txt, requirements-dev.txt
+✅ **tools/** - Playwright runner and log parser utilities
+✅ **orchestration/** - Main workflow orchestration
+✅ **config/** - Pydantic-based configuration management
+✅ **examples/** - Complete usage examples
+✅ **rag/** - Vector database and embeddings (implemented)
+✅ **evaluation/** - Performance metrics and evaluation (implemented)
+✅ **prompts/** - All LLM prompt templates including test generation
+✅ **api/** - API package structure
+✅ **data/** - ChromaDB and persistence directories
+✅ **logs/** - Application logging directory
 
 ### Development Tools (Professional)
-✅ **Makefile** - 20+ development commands
+✅ **scripts/Makefile** - 20+ development commands
 ✅ **setup.py** - Package distribution setup
-✅ **requirements.txt** - Core dependencies (documented)
-✅ **requirements-dev.txt** - Development dependencies
-✅ **setup-windows.ps1** - PowerShell setup script
-✅ **setup-windows.bat** - Command Prompt setup script
+✅ **requirements/** - Organized Python dependencies
+✅ **scripts/windows/** - Windows setup scripts
+✅ **docker/** - Container configuration
 ✅ **pyproject.toml** - Modern Python packaging (NEW)
 ✅ **.pre-commit-config.yaml** - Code quality hooks (NEW)
 ✅ **tox.ini** - Multi-version testing (NEW)
@@ -94,8 +114,8 @@ git clone <repository>
 cd autonomous-qa-platform
 
 # Install dependencies
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+pip install -r requirements/requirements.txt
+pip install -r requirements/requirements-dev.txt
 playwright install
 
 # Set API key

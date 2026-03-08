@@ -1,5 +1,9 @@
 # API Reference
 
+**Author:** Ashwin Kulkarni  
+**Email:** ashwin.ak21@gmail.com  
+**License:** MIT
+
 ## Overview
 
 The Autonomous QA Platform provides a REST API for programmatic access to QA workflows.

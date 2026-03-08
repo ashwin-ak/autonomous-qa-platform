@@ -149,8 +149,8 @@ python -m venv venv
 venv\Scripts\activate
 
 REM Install dependencies
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+pip install -r requirements/requirements.txt
+pip install -r requirements/requirements-dev.txt
 
 REM Install Playwright
 playwright install
@@ -191,7 +191,7 @@ Should show Python 3.11 or higher.
 ### Error: "pip not found"
 Use the module directly:
 ```cmd
-python -m pip install -r requirements.txt
+python -m pip install -r requirements/requirements.txt
 ```
 
 ### Error: "playwright not found after install"

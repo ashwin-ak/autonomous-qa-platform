@@ -7,8 +7,8 @@ include CONTRIBUTING.md
 include WINDOWS_SETUP.md
 include WINDOWS_QUICK_FIX.md
 include .env.example
-include requirements.txt
-include requirements-dev.txt
+include requirements/requirements.txt
+include requirements/requirements-dev.txt
 include pyproject.toml
 include tox.ini
 include .pre-commit-config.yaml

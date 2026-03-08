@@ -2,6 +2,10 @@
 
 An enterprise-grade, AI-driven Autonomous QA platform that automatically generates, executes, and analyzes test cases using LLM agents. Built with LangChain, OpenAI, and Playwright.
 
+**Author:** Ashwin Kulkarni  
+**Email:** ashwin.ak21@gmail.com  
+**License:** MIT
+
 ## Overview
 
 The Autonomous QA Platform automates the entire QA process:
@@ -36,16 +40,16 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 make setup
 
 # Windows PowerShell:
-.\setup-windows.ps1 -Task setup
+.\scripts\windows\setup-windows.ps1 -Task setup
 
 # Windows Command Prompt:
-setup-windows.bat setup
+scripts\windows\setup-windows.bat setup
 ```
 
 Or install manually:
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+pip install -r requirements/requirements.txt
 
 # Install Playwright browsers
 playwright install
@@ -163,7 +167,18 @@ autonomous-qa-platform/
 │   ├── configuration.md
 │   ├── api.md
 │   └── development.md
-├── requirements.txt                 # Python dependencies
+├── scripts/                        # Setup and utility scripts
+│   ├── Makefile                    # Development tasks
+│   └── windows/                    # Windows-specific scripts
+│       ├── setup-windows.ps1
+│       └── setup-windows.bat
+├── docker/                         # Docker configuration
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── .dockerignore
+├── requirements/                   # Python dependencies
+│   ├── requirements.txt
+│   └── requirements-dev.txt
 ├── .env.example                     # Environment template
 ├── README.md                        # This file
 └── LICENSE

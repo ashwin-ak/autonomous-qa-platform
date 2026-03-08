@@ -10,10 +10,10 @@ readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.11"
 authors = [
-    {name = "Autonomous QA Team", email = "qa@example.com"},
+    {name = "Ashwin Kulkarni", email = "ashwin.ak21@gmail.com"},
 ]
 maintainers = [
-    {name = "Autonomous QA Team", email = "qa@example.com"},
+    {name = "Ashwin Kulkarni", email = "ashwin.ak21@gmail.com"},
 ]
 keywords = ["qa", "testing", "automation", "ai", "llm", "playwright"]
 classifiers = [

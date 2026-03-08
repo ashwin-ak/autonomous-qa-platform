@@ -17,10 +17,10 @@ if ($Task -eq 'setup') {
     python -m pip install --upgrade pip setuptools wheel
     if ($LASTEXITCODE -ne 0) { Write-ERR "Failed to upgrade pip"; exit 1 }
     Write-I "Installing core dependencies..."
-    pip install -r requirements.txt
+    pip install -r requirements/requirements.txt
     if ($LASTEXITCODE -ne 0) { Write-ERR "Failed to install core dependencies"; exit 1 }
     Write-I "Installing dev dependencies..."
-    pip install -r requirements-dev.txt
+    pip install -r requirements/requirements-dev.txt
     if ($LASTEXITCODE -ne 0) { Write-ERR "Failed to install dev dependencies"; exit 1 }
     Write-OK "Dependencies installed"
     
@@ -57,15 +57,15 @@ elseif ($Task -eq 'install') {
     python -m pip install --upgrade pip setuptools wheel
     if ($LASTEXITCODE -ne 0) { Write-ERR "Failed to upgrade pip"; exit 1 }
     Write-I "Installing core dependencies..."
-    pip install -r requirements.txt
+    pip install -r requirements/requirements.txt
     if ($LASTEXITCODE -ne 0) { Write-ERR "Failed to install core dependencies"; exit 1 }
     Write-OK "Dependencies installed"
 }
 elseif ($Task -eq 'install-dev') {
     Write-H "Installing Development Dependencies"
     python -m pip install --upgrade pip setuptools wheel
-    pip install -r requirements.txt
-    pip install -r requirements-dev.txt
+    pip install -r requirements/requirements.txt
+    pip install -r requirements/requirements-dev.txt
     Write-OK "Dev dependencies installed"
 }
 elseif ($Task -eq 'test') {
