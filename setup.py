@@ -9,26 +9,26 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 # Read requirements
-requirements = (this_directory / "requirements.txt").read_text(encoding="utf-8").strip().split("\n")
+requirements = (this_directory / "requirements" / "requirements.txt").read_text(encoding="utf-8").strip().split("\n")
 requirements = [req.strip() for req in requirements if req.strip() and not req.startswith("#")]
 
 # Read dev requirements
-dev_requirements = (this_directory / "requirements-dev.txt").read_text(encoding="utf-8").strip().split("\n")
+dev_requirements = (this_directory / "requirements" / "requirements-dev.txt").read_text(encoding="utf-8").strip().split("\n")
 dev_requirements = [req.strip() for req in dev_requirements if req.strip() and not req.startswith("#") and not req.startswith("-r")]
 
 setup(
     name="autonomous-qa-platform",
     version="1.0.0",
     author="Ashwin Kulkarni",
-    author_email="ashwin@example.com",
+    author_email="ashwin.ak21@gmail.com",
     description="An AI-driven Autonomous QA platform that generates tests, executes them, and performs root cause analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ashwin-qa/autonomous-qa-platform",
+    url="https://github.com/ashwin-ak/autonomous-qa-platform",
     project_urls={
-        "Bug Tracker": "https://github.com/ashwin-qa/autonomous-qa-platform/issues",
-        "Documentation": "https://github.com/ashwin-qa/autonomous-qa-platform/docs",
-        "Source Code": "https://github.com/ashwin-qa/autonomous-qa-platform",
+        "Bug Tracker": "https://github.com/ashwin-ak/autonomous-qa-platform/issues",
+        "Documentation": "https://github.com/ashwin-ak/autonomous-qa-platform/docs",
+        "Source Code": "https://github.com/ashwin-ak/autonomous-qa-platform",
     },
     packages=find_packages(exclude=["tests", "examples", "docs"]),
     classifiers=[

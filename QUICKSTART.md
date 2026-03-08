@@ -1,5 +1,9 @@
 # Quick Start Guide
 
+**Author:** Ashwin Kulkarni  
+**Email:** ashwin.ak21@gmail.com  
+**License:** MIT
+
 ## 5-Minute Setup
 
 ### 1. Install

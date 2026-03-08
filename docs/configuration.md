@@ -1,5 +1,8 @@
 # Configuration Guide
 
+**Author:** Ashwin Kulkarni  
+**License:** MIT
+
 ## Environment Variables
 
 Create a `.env` file in the root directory (copy from `.env.example`):

@@ -1,5 +1,8 @@
 # Installation Guide
 
+**Author:** Ashwin Kulkarni  
+**License:** MIT
+
 ## System Requirements
 
 - **Python**: 3.11 or higher
@@ -29,7 +32,7 @@ venv\Scripts\activate
 ### 3. Install Dependencies
 ```bash
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements/requirements.txt
 ```
 
 ### 4. Install Playwright Browsers
@@ -52,12 +55,12 @@ make setup
 
 **Windows PowerShell:**
 ```powershell
-.\setup-windows.ps1 -Task setup
+.\scripts\windows\setup-windows.ps1 -Task setup
 ```
 
 **Windows Command Prompt:**
 ```cmd
-setup-windows.bat setup
+scripts\windows\setup-windows.bat setup
 ```
 
 ### 7. Verify Installation
@@ -139,10 +142,10 @@ pipenv shell
 pip install --upgrade pip setuptools wheel
 
 # Install project dependencies
-pip install -r requirements.txt
+pip install -r requirements/requirements.txt
 
 # Optional: Install development dependencies
-pip install -r requirements-dev.txt
+pip install -r requirements/requirements-dev.txt
 ```
 
 ### Step 5: Install Playwright Browsers
@@ -302,7 +305,7 @@ Error: Address already in use
 
 ```bash
 # Update dependencies
-pip install --upgrade -r requirements.txt
+pip install --upgrade -r requirements/requirements.txt
 
 # Update Playwright browsers
 playwright install --with-deps

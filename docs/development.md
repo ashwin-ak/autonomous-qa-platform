@@ -1,5 +1,8 @@
 # Development Guide
 
+**Author:** Ashwin Kulkarni  
+**License:** MIT
+
 ## Setting Up Development Environment
 
 ### Prerequisites
@@ -20,8 +23,8 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies (with dev extras)
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+pip install -r requirements/requirements.txt
+pip install -r requirements/requirements-dev.txt
 
 # Install Playwright browsers
 playwright install
@@ -75,7 +78,9 @@ autonomous-qa-platform/
 │   ├── configuration.md
 │   ├── api.md
 │   └── development.md
-└── requirements.txt                 # Dependencies
+├── requirements/                    # Dependencies
+│   ├── requirements.txt
+│   └── requirements-dev.txt
 ```
 
 ## Development Workflow

@@ -17,8 +17,8 @@ if "%TASK%"=="setup" (
     
     echo Installing dev dependencies...
     pip install --upgrade pip setuptools wheel
-    pip install -r requirements.txt
-    pip install -r requirements-dev.txt
+    pip install -r requirements/requirements.txt
+    pip install -r requirements/requirements-dev.txt
     
     echo.
     echo Installing Playwright browsers...
@@ -55,14 +55,14 @@ if "%TASK%"=="setup" (
 
 if "%TASK%"=="install" (
     echo Installing dependencies...
-    pip install -r requirements.txt
+    pip install -r requirements/requirements.txt
     goto :eof
 )
 
 if "%TASK%"=="install-dev" (
     echo Installing dev dependencies...
-    pip install -r requirements.txt
-    pip install -r requirements-dev.txt
+    pip install -r requirements/requirements.txt
+    pip install -r requirements/requirements-dev.txt
     goto :eof
 )
 

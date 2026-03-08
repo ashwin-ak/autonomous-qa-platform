@@ -1,5 +1,8 @@
 # Architecture
 
+**Author:** Ashwin Kulkarni  
+**License:** MIT
+
 ## System Overview
 
 The Autonomous QA Platform follows a multi-agent orchestration pattern with clear separation of concerns.

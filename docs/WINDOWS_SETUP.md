@@ -12,11 +12,11 @@ PowerShell is built into Windows and provides the most features.
 cd autonomous-qa-platform
 
 # First time full setup
-.\setup-windows.ps1 -Task setup
+.\scripts\windows\setup-windows.ps1 -Task setup
 
 # Or run tasks individually
-.\setup-windows.ps1 -Task install
-.\setup-windows.ps1 -Task run-api
+.\scripts\windows\setup-windows.ps1 -Task install
+.\scripts\windows\setup-windows.ps1 -Task run-api
 ```
 
 ### Available Tasks
@@ -38,19 +38,19 @@ run-api     - Start FastAPI server
 ### Example Commands
 ```powershell
 # First time setup
-.\setup-windows.ps1 -Task setup
+.\scripts\windows\setup-windows.ps1 -Task setup
 
 # Start API server
-.\setup-windows.ps1 -Task run-api
+.\scripts\windows\setup-windows.ps1 -Task run-api
 
 # Run tests
-.\setup-windows.ps1 -Task test
+.\scripts\windows\setup-windows.ps1 -Task test
 
 # Format code
-.\setup-windows.ps1 -Task format
+.\scripts\windows\setup-windows.ps1 -Task format
 
 # Run all quality checks
-.\setup-windows.ps1 -Task check
+.\scripts\windows\setup-windows.ps1 -Task check
 ```
 
 ### Troubleshooting PowerShell
@@ -61,7 +61,7 @@ run-api     - Start FastAPI server
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Then run the setup script again
-.\setup-windows.ps1 -Task setup
+.\scripts\windows\setup-windows.ps1 -Task setup
 ```
 
 **Issue: ".ps1 cannot be loaded"**
@@ -70,7 +70,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 cd autonomous-qa-platform
 
 # Then run with full path
-.\setup-windows.ps1 -Task setup
+.\scripts\windows\setup-windows.ps1 -Task setup
 ```
 
 ## Option 2: Command Prompt
@@ -83,11 +83,11 @@ Command Prompt is available on all Windows systems with no extra configuration n
 cd autonomous-qa-platform
 
 # First time full setup
-setup-windows.bat setup
+scripts\windows\setup-windows.bat setup
 
 # Or run tasks individually
-setup-windows.bat install
-setup-windows.bat run-api
+scripts\windows\setup-windows.bat install
+scripts\windows\setup-windows.bat run-api
 ```
 
 ### Available Tasks
@@ -120,10 +120,10 @@ If you prefer complete control, run commands manually:
 
 ```cmd
 REM Install dependencies
-pip install -r requirements.txt
+pip install -r requirements/requirements.txt
 
 REM Install dev dependencies
-pip install -r requirements-dev.txt
+pip install -r requirements/requirements-dev.txt
 
 REM Install Playwright browsers
 playwright install
@@ -213,7 +213,7 @@ REM You should see (venv) at the start of your prompt
 
 ### Issue: pip command not found
 ```cmd
-python -m pip install -r requirements.txt
+python -m pip install -r requirements/requirements.txt
 ```
 
 ### Issue: playwright install fails

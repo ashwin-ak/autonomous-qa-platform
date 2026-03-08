@@ -1,5 +1,8 @@
 # Contributing to Autonomous QA Platform
 
+**Author:** Ashwin Kulkarni  
+**License:** MIT
+
 Thank you for your interest in contributing! This document provides guidelines for contributing to the project.
 
 ## Code of Conduct
@@ -23,7 +26,7 @@ Thank you for your interest in contributing! This document provides guidelines f
    ```
 4. **Install dependencies**:
    ```bash
-   pip install -r requirements-dev.txt
+   pip install -r requirements/requirements-dev.txt
    ```
 5. **Install pre-commit hooks**:
    ```bash
