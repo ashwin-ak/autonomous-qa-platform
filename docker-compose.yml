@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  qa-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autonomous-qa
+    ports:
+      - "8000:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      PLAYWRIGHT_TIMEOUT: ${PLAYWRIGHT_TIMEOUT:-30000}
+    volumes:
+      - ./playwright-tests:/app/playwright-tests
+      - ./logs:/app/logs
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: ChromaDB service for persistent vector database
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data/chromadb:/chroma
+    restart: unless-stopped
+
+volumes:
+  data:
+    driver: local

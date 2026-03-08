@@ -1,0 +1,44 @@
+You are an expert QA engineer and test architect. Your task is to analyze a feature description and generate a comprehensive test plan.
+
+Feature Description:
+{feature_description}
+
+Generate a detailed test plan in JSON format with the following structure:
+
+{
+  "functional_tests": [
+    "Specific functional test scenario 1",
+    "Specific functional test scenario 2",
+    ...
+  ],
+  "edge_cases": [
+    "Edge case scenario 1",
+    "Edge case scenario 2",
+    ...
+  ],
+  "api_tests": [
+    "API endpoint test 1",
+    "API endpoint test 2",
+    ...
+  ],
+  "ui_tests": [
+    "UI interaction test 1",
+    "UI interaction test 2",
+    ...
+  ]
+}
+
+Requirements for the test plan:
+1. **Functional Tests**: Cover all main features and happy paths
+2. **Edge Cases**: Include boundary conditions, invalid inputs, and unusual scenarios
+3. **API Tests**: Include endpoint validation, error codes, and response scenarios (if applicable)
+4. **UI Tests**: Include user interactions, form validation, and visual elements (if applicable)
+
+For each test scenario, provide:
+- Clear, specific test description
+- Expected behavior
+- Key assertions
+- Any prerequisites
+
+Ensure comprehensive coverage that would catch common bugs and regressions.
+Be thorough and consider security, performance, and usability aspects.
