@@ -35,13 +35,10 @@ jobs:
         pip install -r requirements/requirements.txt
         pip install -r requirements/requirements-dev.txt
 
-    - name: Install system dependencies for Playwright
+    - name: Install Playwright browsers and dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y libnss3 libatk-bridge2.0-0 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libxss1 libasound2
-
-    - name: Install Playwright browsers
-      run: playwright install
+        playwright install
+        playwright install-deps
 
     - name: Run linting
       run: |
@@ -53,11 +50,12 @@ jobs:
       run: mypy agents/ tools/ orchestration/ api/ evaluation/
 
     - name: Run tests
-      run: pytest tests/ -v --cov=agents,tools,orchestration --cov-report=xml
+      run: pytest -v --cov=agents,tools,orchestration,api,evaluation --cov-report=xml
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     - name: Upload coverage to Codecov
+      if: always()
       uses: codecov/codecov-action@v3
       with:
         file: ./coverage.xml
